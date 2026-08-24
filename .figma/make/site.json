@@ -1,0 +1,10 @@
+{
+  "description": "Connect local business owners with expert advisors through a user-friendly platform offering personalized consultations and valuable resources.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

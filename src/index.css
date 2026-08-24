@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-forest: #1B3B2B;
+  --color-forest-light: #2A5440;
+  --color-forest-muted: #E8F0EB;
+  --color-amber: #D97706;
+  --color-offwhite: #F9F8F3;
+  --color-border: #E5E7EB;
+  --color-muted: #6B7280;
+}
+
+/* Fix white flash on load */
+html, body {
+  background-color: #F9F8F3;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Noto Sans KR', 'Inter', system-ui, sans-serif;
+  color: #111827;
+}
+
+* { box-sizing: border-box; }
+
+/* ── Moving Glowing Border ──────────────────────────────────────────────────── */
+@keyframes glow-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 200, 50, 0.7)) drop-shadow(0 0 20px rgba(255, 160, 0, 0.5)); }
+  50%       { filter: drop-shadow(0 0 16px rgba(255, 220, 80, 1))  drop-shadow(0 0 36px rgba(255, 160, 0, 0.8)); }
+}
+
+.glow-border-wrap {
+  position: relative;
+  display: inline-flex;
+  border-radius: 26px;
+  padding: 3px;
+  overflow: hidden;
+  animation: glow-pulse 1.8s ease-in-out infinite;
+}
+
+/* Main spinning glow beam */
+.glow-border-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent    0%,
+    transparent   50%,
+    rgba(255, 180,  0, 0.6)  58%,
+    rgba(255, 240, 80, 1.00) 65%,
+    rgba(255, 255,200, 1.00) 68%,
+    rgba(255, 240, 80, 1.00) 71%,
+    rgba(255, 180,  0, 0.6)  78%,
+    transparent   86%,
+    transparent  100%
+  );
+  animation: glow-spin 2.8s linear infinite;
+  animation-delay: -2.1s;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+/* Second softer beam — offset 180° for fill glow */
+.glow-border-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 180deg,
+    transparent   0%,
+    transparent  55%,
+    rgba(255, 200, 60, 0.25) 63%,
+    rgba(255, 240, 80, 0.50) 68%,
+    rgba(255, 200, 60, 0.25) 73%,
+    transparent  81%,
+    transparent 100%
+  );
+  animation: glow-spin 2.8s linear infinite;
+  animation-delay: -2.1s;
+  z-index: 0;
+  filter: blur(4px);
+}
+
+.glow-border-wrap > button {
+  position: relative;
+  z-index: 1;
+  border-radius: 24px;
+  width: 100%;
+}
+
+/* AI chat button float animation */
+@keyframes ai-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Hide scrollbars by default */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 2px; }
