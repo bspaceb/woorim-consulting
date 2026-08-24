@@ -447,14 +447,14 @@ function OverviewBanner() {
   return (
     <section style={{ backgroundColor: FOREST, padding: isMobile ? '48px 20px' : '72px 24px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <p style={{ textAlign: 'center', fontSize: isMobile ? 15 : 'clamp(17px, 2vw, 22px)', fontWeight: 500, color: 'rgba(255,255,255,0.8)', marginBottom: isMobile ? 36 : 56, letterSpacing: '-0.3px', lineHeight: 1.6 }}>
+        <p style={{ textAlign: 'center', fontSize: isMobile ? 20 : 'clamp(17px, 2vw, 22px)', fontWeight: 500, color: 'rgba(255,255,255,0.8)', marginBottom: isMobile ? 36 : 56, letterSpacing: '-0.3px', lineHeight: 1.6 }}>
           전국 소상공인과 자영업자가 우림을 선택하는 이유
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: isMobile ? 28 : 24 }}>
           {stats.map((s) => (
             <div key={s.value} style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: isMobile ? 32 : 'clamp(28px, 4vw, 48px)', fontWeight: 300, color: 'white', letterSpacing: '-1px', marginBottom: 8 }}>{s.value}</div>
-              <div style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', fontWeight: 300 }}>{s.label}</div>
+              <div style={{ fontSize: isMobile ? 32 : 'clamp(28px, 4vw, 60px)', fontWeight: 300, color: 'white', letterSpacing: '-1px', marginBottom: 8 }}>{s.value}</div>
+              <div style={{ fontSize: 20, color: 'rgba(255,255,255,0.6)', fontWeight: 400 }}>{s.label}</div>
             </div>
           ))}
         </div>
@@ -879,10 +879,10 @@ function CTABand() {
   const w = useWindowWidth()
   const isMobile = w < 640
   return (
-    <section style={{ padding: isMobile ? '60px 20px' : '80px 24px', backgroundColor: 'rgb(218, 219, 208)' }}>
+    <section style={{ padding: isMobile ? '60px 20px' : '80px 24px', backgroundColor: 'rgba(27, 59, 43, 1)' }}>
       <div style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
-        <h2 style={{ fontSize: isMobile ? 24 : 'clamp(28px, 4vw, 38px)', fontWeight: 800, color: FOREST, letterSpacing: '-0.8px', lineHeight: 1.25, marginBottom: 14 }}>지금 당장 해결해야 할 문제가 있으신가요?</h2>
-        <p style={{ fontSize: isMobile ? 15 : 17, color: '#2A5440', marginBottom: 40, lineHeight: 1.6 }}>24시 긴급상담으로 2시간 이내 전문가와 연결됩니다</p>
+        <h2 style={{ fontSize: isMobile ? 24 : 'clamp(28px, 4vw, 38px)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.8px', lineHeight: 1.25, marginBottom: 14 }}>지금 당장 해결해야 할 문제가 있으신가요?</h2>
+        <p style={{ fontSize: isMobile ? 15 : 17, color: '#ffffff', marginBottom: 40, lineHeight: 1.6 }}>24시 긴급상담으로 2시간 이내 전문가와 연결됩니다</p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <div className="glow-border-wrap">
             <HoverBtn base={{ padding: isMobile ? '16px 32px' : '19px 42px', backgroundColor: AMBER, color: 'white', border: 'none', borderRadius: 24, fontWeight: 700, fontSize: isMobile ? 15 : 17, cursor: 'pointer', transition: 'all 200ms ease' }} hover={{ backgroundColor: '#B45309', transform: 'translateY(-2px)' }}>
@@ -909,19 +909,19 @@ function Footer() {
     { title: '고객지원', links: ['자주 묻는 질문', '1:1 문의', '이용약관', '개인정보 처리방침'] },
   ]
   return (
-    <footer style={{ backgroundColor: '#111827', padding: isMobile ? '48px 20px 32px' : '64px 24px 36px' }}>
+    <footer style={{ backgroundColor: '#233F2E', padding: isMobile ? '48px 20px 32px' : '64px 24px 36px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr 1fr' : '2fr 1fr 1fr 1fr 1fr', gap: isMobile ? 32 : 48, marginBottom: 40, paddingBottom: 40, borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
           <div style={{ gridColumn: isMobile ? '1 / -1' : 'auto' }}>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 14 }}>
               <span style={{ fontSize: 24, fontWeight: 800, color: 'white' }}>우림</span>
-              <span style={{ fontSize: 18, fontWeight: 700, color: 'rgba(255,255,255,0.5)' }}>祐林</span>
+              <span style={{ fontSize: 18, fontWeight: 700, color: 'rgba(255, 255, 255, 0.83)' }}>祐林</span>
             </div>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, maxWidth: 260 }}>전국 소상공인과 자영업자를 위한 전문가 1:1 자문 플랫폼.</p>
           </div>
           {columns.map((col) => (
             <div key={col.title}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.8px', marginBottom: 14, textTransform: 'uppercase' }}>{col.title}</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.8px', marginBottom: 14, textTransform: 'uppercase' }}>{col.title}</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 9 }}>
                 {col.links.map((link) => (
                   <li key={link}>
