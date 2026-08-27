@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import logoUrl from '@/imports/pasted_text/icon-leaf-branch.svg'
 
+// public/tica0140005996.jpg 파일 기준
+const publicUrl = import.meta.env.VITE_PUBLIC_URL || import.meta.env.BASE_URL;
+
+
+
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 const FOREST = '#1B3B2B'
@@ -30,7 +35,7 @@ const heroSlides = [
     title: '사업의 모든 문제,\n전문가가 바로 답합니다',
     sub: '법률 · 노무 · 세무 분야 인증 전문가와\n실시간 1:1 상담으로 빠르게 해결하세요',
     cta: '지금 상담 신청',
-    image: `${import.meta.env.BASE_URL}tica1160018206.jpg`,
+    image: `${publicUrl}tica1160018206.jpg`,
     imgOpacity: 0.8,
     accent: '#1B3B2B',
   },
@@ -52,7 +57,7 @@ const heroSlides = [
     // 기존: image: new URL('@/imports/tica1160018206.jpg', import.meta.url).href,
 // 변경:
    
-    image: `${import.meta.env.BASE_URL}tica0140005996.jpg`,
+    image: `${publicUrl}tica0140005996.jpg`,
     imgOpacity: 0.8,
     accent: '#1B3B2B',
   },
