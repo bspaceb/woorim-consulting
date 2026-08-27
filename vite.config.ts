@@ -14,8 +14,8 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === 'development'
 
   return {
-    // Vercel 환경변수(VITE_PUBLIC_URL) 또는 .env 설정값 사용, 기본값은 '/bspaceb/'
-    base: process.env.VITE_PUBLIC_URL || env.VITE_PUBLIC_URL || '/bspaceb/',
+    // Vercel 환경변수(VITE_PUBLIC_URL) 또는 .env 설정값 사용, 기본값은 '/woorim-consulting/'
+    base: process.env.VITE_PUBLIC_URL || env.VITE_PUBLIC_URL || '/woorim-consulting/',
     build: {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
