@@ -30,7 +30,7 @@ const heroSlides = [
     title: '사업의 모든 문제,\n전문가가 바로 답합니다',
     sub: '법률 · 노무 · 세무 분야 인증 전문가와\n실시간 1:1 상담으로 빠르게 해결하세요',
     cta: '지금 상담 신청',
-    image: '../public/tica1160018206.jpg',
+    image: './tica1160018206.jpg',
     imgOpacity: 0.8,
     accent: '#1B3B2B',
   },
@@ -52,7 +52,7 @@ const heroSlides = [
     // 기존: image: new URL('@/imports/tica1160018206.jpg', import.meta.url).href,
 // 변경:
    
-    image: '../public/tica0140005996.jpg',
+    image: './tica0140005996.jpg',
     imgOpacity: 0.8,
     accent: '#1B3B2B',
   },
