@@ -86,9 +86,9 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
   }
 
   const title = config.title ?? "우림祐林"
-  const description = config.description ?? ''
-  const favicon = config.icons?.icon ?? '/public/favicon.ico'
-  const socialImage = config.openGraph?.image ?? ''
+  const description = config.description ?? '든든한 성장의 길을 찾아드리는 1:1 맞춤 자문 상담 서비스'
+  const favicon = config.icons?.icon ?? '/public/woorim_favicon.ico'
+  const socialImage = config.openGraph?.image ?? '/public/ogimg.jpg'
   const language = sanitizeHtmlValue(config.language) || 'kr'
   const googleAnalyticsId = sanitizeHtmlValue(config.analytics?.googleAnalyticsId)
   const headStart = config.customScripts?.headStart ?? ''
